@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
+//2 small lines to change existing code for #8
 class FileHelpers {
     static List<File> getFiles(Path start) throws IOException {
         File f = start.toFile();
@@ -24,7 +24,7 @@ class FileHelpers {
         return result;
     }
     static String readFile(File f) throws IOException {
-        return new String(Files.readAllBytes(f.toPath()));
+        return new String(f.getName()); // this needs to be changed
     }
 }
 
